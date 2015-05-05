@@ -1,0 +1,32 @@
+<div class="container">
+	<div clas="row"> 
+		<div class="col-xs-6">
+			<button ng-click="addFarm()" class="btn btn-primary">Add new farm</button>
+		</div>	
+
+	</div>
+</div>
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Endereço</th>
+        <th>Cep</th>
+        <th>Posição Geográfica</th>
+        <th>Editar </th>
+        <th>Excluir</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="farm in farms track by $index">
+        <td><nobr>{{farm.name}}<nobr></td>
+        <td><nobr>{{farm.address}}</nobr></td>
+        <td><nobr>{{farm.cep}}</nobr></td>
+        <td><nobr><button class="btn btn-success">Detalhes</button></nobr></td>
+        <td><nobr><button class="btn btn-warning">Editar</button></nobr></td>
+        <td><nobr><button class="btn btn-danger">Excluir</button></nobr></td>
+      </tr>
+     
+    </tbody>
+  </table>
